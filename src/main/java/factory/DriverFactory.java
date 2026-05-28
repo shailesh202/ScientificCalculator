@@ -4,39 +4,33 @@ package factory;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import utils.ConfigReader;
 
 import java.time.Duration;
 
 public class DriverFactory {
 	
-    private static ThreadLocal<WebDriver> driver =  new ThreadLocal<>();
+	private static ThreadLocal<WebDriver> driver =
+            new ThreadLocal<>();
 
     public static void initDriver() {
 
-        String browser =  ConfigReader.getProperty("browser");
+        WebDriverManager.chromedriver().setup();
 
-        if (browser.equalsIgnoreCase("chrome")) {
+        driver.set(new ChromeDriver());
 
-            WebDriverManager.chromedriver().setup();
+        getDriver().manage().window().maximize();
 
-            ChromeOptions options =  new ChromeOptions();
-
-            options.addArguments("--start-maximized");
-
-            driver.set(new ChromeDriver(options));
-        }
-
+        /*
+            Keep implicit wait low
+         */
         getDriver().manage().timeouts()
-        .implicitlyWait(
-                Duration.ofSeconds(
-                        Integer.parseInt(
-                                ConfigReader.getProperty(
-                                        "implicitWait"
-                                )
-                        )
-                )
+                .implicitlyWait(
+                        Duration.ofSeconds(2)
+                );
+
+        getDriver().get(
+                ConfigReader.getProperty("url")
         );
     }
 

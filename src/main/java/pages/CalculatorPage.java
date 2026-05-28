@@ -1,6 +1,8 @@
 package pages;
 
 import factory.DriverFactory;
+import utils.WaitUtils;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -13,9 +15,12 @@ public class CalculatorPage {
 
     public void clickButton(String value) {
 
-        driver.findElement(
-                By.xpath("//button[normalize-space()='" + value + "']")
-        ).click();
+        By locator = By.xpath(
+                "//button[contains(normalize-space(),'"
+                        + value + "')]"
+        );
+
+        WaitUtils.waitForClickable(locator).click();
     }
 
     public void clickEquals() {
@@ -30,7 +35,10 @@ public class CalculatorPage {
 
     public String getDisplayedValue() {
 
-        return driver.findElement(display).getAttribute("value");
+        By display = By.id("display");
+
+        return WaitUtils
+                .waitForVisibility(display).getAttribute("value");
     }
 
     public void enterNumber(String number) {

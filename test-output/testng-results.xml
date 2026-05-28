@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="0" failed="0" skipped="2">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-05-28T19:57:58 IST" name="Scientific Calculator Regression Suite" finished-at="2026-05-28T19:59:06 IST" duration-ms="67398">
+  <suite started-at="2026-05-28T20:13:15 IST" name="Scientific Calculator Regression Suite" finished-at="2026-05-28T20:13:34 IST" duration-ms="18605">
     <groups>
       <group name="regression">
         <method signature="BasicOperationsTest.verifyAddition()[pri:1, instance:testcases.BasicOperationsTest@cecf639]" name="verifyAddition" class="testcases.BasicOperationsTest"/>
@@ -12,37 +12,177 @@
         <method signature="BasicOperationsTest.verifyAddition()[pri:1, instance:testcases.BasicOperationsTest@cecf639]" name="verifyAddition" class="testcases.BasicOperationsTest"/>
       </group> <!-- sanity -->
     </groups>
-    <test started-at="2026-05-28T19:57:58 IST" name="All Calculator Tests" finished-at="2026-05-28T19:59:06 IST" duration-ms="67398">
+    <test started-at="2026-05-28T20:13:15 IST" name="All Calculator Tests" finished-at="2026-05-28T20:13:34 IST" duration-ms="18605">
       <class name="testcases.BasicOperationsTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.BasicOperationsTest@cecf639]" started-at="2026-05-28T19:57:58 IST" name="setup" finished-at="2026-05-28T19:58:08 IST" duration-ms="10082" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.BasicOperationsTest@cecf639]" started-at="2026-05-28T20:13:15 IST" name="setup" finished-at="2026-05-28T20:13:25 IST" duration-ms="9704" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at java.base/java.util.Objects.requireNonNull(Objects.java:208)
+at java.base/java.util.ImmutableCollections$Map1.<init>(ImmutableCollections.java:1105)
+at java.base/java.util.Map.of(Map.java:1353)
+at org.openqa.selenium.remote.DriverCommand.GET(DriverCommand.java:180)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:300)
+at factory.DriverFactory.initDriver(DriverFactory.java:32)
+at testcases.BaseTest.setup(BaseTest.java:15)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:842)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="initPage()[pri:0, instance:testcases.BasicOperationsTest@cecf639]" started-at="2026-05-28T19:58:08 IST" name="initPage" finished-at="2026-05-28T19:58:08 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="initPage()[pri:0, instance:testcases.BasicOperationsTest@cecf639]" started-at="2026-05-28T20:13:25 IST" name="initPage" finished-at="2026-05-28T20:13:25 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initPage -->
-        <test-method signature="verifyAddition()[pri:1, instance:testcases.BasicOperationsTest@cecf639]" started-at="2026-05-28T19:58:08 IST" name="verifyAddition" description="Verify the addition of two numbers" finished-at="2026-05-28T19:58:22 IST" duration-ms="13928" status="PASS">
+        <test-method signature="verifyAddition()[pri:1, instance:testcases.BasicOperationsTest@cecf639]" started-at="2026-05-28T20:13:25 IST" name="verifyAddition" description="Verify the addition of two numbers" finished-at="2026-05-28T20:13:25 IST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at java.base/java.util.Objects.requireNonNull(Objects.java:208)
+at java.base/java.util.ImmutableCollections$Map1.<init>(ImmutableCollections.java:1105)
+at java.base/java.util.Map.of(Map.java:1353)
+at org.openqa.selenium.remote.DriverCommand.GET(DriverCommand.java:180)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:300)
+at factory.DriverFactory.initDriver(DriverFactory.java:32)
+at testcases.BaseTest.setup(BaseTest.java:15)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:842)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAddition -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.BasicOperationsTest@cecf639]" started-at="2026-05-28T19:58:22 IST" name="tearDown" finished-at="2026-05-28T19:58:32 IST" duration-ms="10126" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.BasicOperationsTest@cecf639]" started-at="2026-05-28T20:13:25 IST" name="tearDown" finished-at="2026-05-28T20:13:25 IST" duration-ms="105" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.BasicOperationsTest@cecf639]" started-at="2026-05-28T19:58:32 IST" name="setup" finished-at="2026-05-28T19:58:42 IST" duration-ms="9187" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.BasicOperationsTest@cecf639]" started-at="2026-05-28T20:13:25 IST" name="setup" finished-at="2026-05-28T20:13:33 IST" duration-ms="8582" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at java.base/java.util.Objects.requireNonNull(Objects.java:208)
+at java.base/java.util.ImmutableCollections$Map1.<init>(ImmutableCollections.java:1105)
+at java.base/java.util.Map.of(Map.java:1353)
+at org.openqa.selenium.remote.DriverCommand.GET(DriverCommand.java:180)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:300)
+at factory.DriverFactory.initDriver(DriverFactory.java:32)
+at testcases.BaseTest.setup(BaseTest.java:15)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:842)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifySubtraction()[pri:2, instance:testcases.BasicOperationsTest@cecf639]" started-at="2026-05-28T19:58:42 IST" name="verifySubtraction" description="Verify the Subtraction of two numbers" finished-at="2026-05-28T19:58:55 IST" duration-ms="13904" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifySubtraction -->
-        <test-method is-config="true" signature="initPage()[pri:0, instance:testcases.BasicOperationsTest@cecf639]" started-at="2026-05-28T19:58:42 IST" name="initPage" finished-at="2026-05-28T19:58:42 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="initPage()[pri:0, instance:testcases.BasicOperationsTest@cecf639]" started-at="2026-05-28T20:13:33 IST" name="initPage" finished-at="2026-05-28T20:13:33 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initPage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.BasicOperationsTest@cecf639]" started-at="2026-05-28T19:58:55 IST" name="tearDown" finished-at="2026-05-28T19:59:06 IST" duration-ms="10125" status="PASS">
+        <test-method signature="verifySubtraction()[pri:2, instance:testcases.BasicOperationsTest@cecf639]" started-at="2026-05-28T20:13:33 IST" name="verifySubtraction" description="Verify the Subtraction of two numbers" finished-at="2026-05-28T20:13:33 IST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at java.base/java.util.Objects.requireNonNull(Objects.java:208)
+at java.base/java.util.ImmutableCollections$Map1.<init>(ImmutableCollections.java:1105)
+at java.base/java.util.Map.of(Map.java:1353)
+at org.openqa.selenium.remote.DriverCommand.GET(DriverCommand.java:180)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:300)
+at factory.DriverFactory.initDriver(DriverFactory.java:32)
+at testcases.BaseTest.setup(BaseTest.java:15)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:842)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySubtraction -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.BasicOperationsTest@cecf639]" started-at="2026-05-28T20:13:33 IST" name="tearDown" finished-at="2026-05-28T20:13:34 IST" duration-ms="174" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
