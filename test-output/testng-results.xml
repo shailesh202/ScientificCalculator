@@ -1,93 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-05-28T16:50:01 IST" name="Default suite" finished-at="2026-05-28T16:50:56 IST" duration-ms="54912">
+  <suite started-at="2026-05-28T18:36:49 IST" name="Scientific Calculator Regression Suite" finished-at="2026-05-28T18:37:23 IST" duration-ms="34942">
     <groups>
     </groups>
-    <test started-at="2026-05-28T16:50:01 IST" name="Default test" finished-at="2026-05-28T16:50:56 IST" duration-ms="54912">
-      <class name="testcases.ScientificOperationsTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.ScientificOperationsTest@661972b0]" started-at="2026-05-28T16:50:01 IST" name="setup" finished-at="2026-05-28T16:50:11 IST" duration-ms="10623" status="PASS">
+    <test started-at="2026-05-28T18:36:49 IST" name="All Calculator Tests" finished-at="2026-05-28T18:37:23 IST" duration-ms="34942">
+      <class name="testcases.BasicOperationsTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.BasicOperationsTest@14028087]" started-at="2026-05-28T18:36:49 IST" name="setup" finished-at="2026-05-28T18:36:59 IST" duration-ms="10741" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="initPage()[pri:0, instance:testcases.ScientificOperationsTest@661972b0]" started-at="2026-05-28T16:50:11 IST" name="initPage" finished-at="2026-05-28T16:50:11 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="initPage()[pri:0, instance:testcases.BasicOperationsTest@14028087]" started-at="2026-05-28T18:36:59 IST" name="initPage" finished-at="2026-05-28T18:36:59 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initPage -->
-        <test-method signature="verifyCosOperation()[pri:0, instance:testcases.ScientificOperationsTest@661972b0]" started-at="2026-05-28T16:50:11 IST" name="verifyCosOperation" finished-at="2026-05-28T16:50:12 IST" duration-ms="717" status="PASS">
+        <test-method signature="verifyAddition()[pri:1, instance:testcases.BasicOperationsTest@14028087]" started-at="2026-05-28T18:36:59 IST" name="verifyAddition" description="Verify the addition of two numbers" finished-at="2026-05-28T18:37:13 IST" duration-ms="14000" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyCosOperation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.ScientificOperationsTest@661972b0]" started-at="2026-05-28T16:50:12 IST" name="tearDown" finished-at="2026-05-28T16:50:12 IST" duration-ms="100" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.ScientificOperationsTest@661972b0]" started-at="2026-05-28T16:50:12 IST" name="setup" finished-at="2026-05-28T16:50:22 IST" duration-ms="9285" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="initPage()[pri:0, instance:testcases.ScientificOperationsTest@661972b0]" started-at="2026-05-28T16:50:22 IST" name="initPage" finished-at="2026-05-28T16:50:22 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initPage -->
-        <test-method signature="verifyMemoryStoreAndRecallqq()[pri:0, instance:testcases.ScientificOperationsTest@661972b0]" started-at="2026-05-28T16:50:22 IST" name="verifyMemoryStoreAndRecallqq" finished-at="2026-05-28T16:50:22 IST" duration-ms="841" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyMemoryStoreAndRecallqq -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.ScientificOperationsTest@661972b0]" started-at="2026-05-28T16:50:22 IST" name="tearDown" finished-at="2026-05-28T16:50:23 IST" duration-ms="144" status="PASS">
+        </test-method> <!-- verifyAddition -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.BasicOperationsTest@14028087]" started-at="2026-05-28T18:37:13 IST" name="tearDown" finished-at="2026-05-28T18:37:23 IST" duration-ms="10150" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.ScientificOperationsTest@661972b0]" started-at="2026-05-28T16:50:23 IST" name="setup" finished-at="2026-05-28T16:50:34 IST" duration-ms="11342" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="initPage()[pri:0, instance:testcases.ScientificOperationsTest@661972b0]" started-at="2026-05-28T16:50:34 IST" name="initPage" finished-at="2026-05-28T16:50:34 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initPage -->
-        <test-method signature="verifyPercentageOperation()[pri:0, instance:testcases.ScientificOperationsTest@661972b0]" started-at="2026-05-28T16:50:34 IST" name="verifyPercentageOperation" finished-at="2026-05-28T16:50:35 IST" duration-ms="764" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyPercentageOperation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.ScientificOperationsTest@661972b0]" started-at="2026-05-28T16:50:35 IST" name="tearDown" finished-at="2026-05-28T16:50:35 IST" duration-ms="89" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.ScientificOperationsTest@661972b0]" started-at="2026-05-28T16:50:35 IST" name="setup" finished-at="2026-05-28T16:50:44 IST" duration-ms="9319" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="initPage()[pri:0, instance:testcases.ScientificOperationsTest@661972b0]" started-at="2026-05-28T16:50:44 IST" name="initPage" finished-at="2026-05-28T16:50:44 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initPage -->
-        <test-method signature="verifySinOperation()[pri:0, instance:testcases.ScientificOperationsTest@661972b0]" started-at="2026-05-28T16:50:44 IST" name="verifySinOperation" finished-at="2026-05-28T16:50:45 IST" duration-ms="792" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifySinOperation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.ScientificOperationsTest@661972b0]" started-at="2026-05-28T16:50:45 IST" name="tearDown" finished-at="2026-05-28T16:50:45 IST" duration-ms="101" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.ScientificOperationsTest@661972b0]" started-at="2026-05-28T16:50:45 IST" name="setup" finished-at="2026-05-28T16:50:55 IST" duration-ms="9923" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="verifySquareRootOperation()[pri:0, instance:testcases.ScientificOperationsTest@661972b0]" started-at="2026-05-28T16:50:55 IST" name="verifySquareRootOperation" finished-at="2026-05-28T16:50:56 IST" duration-ms="728" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifySquareRootOperation -->
-        <test-method is-config="true" signature="initPage()[pri:0, instance:testcases.ScientificOperationsTest@661972b0]" started-at="2026-05-28T16:50:55 IST" name="initPage" finished-at="2026-05-28T16:50:55 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initPage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.ScientificOperationsTest@661972b0]" started-at="2026-05-28T16:50:56 IST" name="tearDown" finished-at="2026-05-28T16:50:56 IST" duration-ms="113" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- testcases.ScientificOperationsTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- testcases.BasicOperationsTest -->
+    </test> <!-- All Calculator Tests -->
+  </suite> <!-- Scientific Calculator Regression Suite -->
 </testng-results>

@@ -11,20 +11,17 @@ import java.time.Duration;
 
 public class DriverFactory {
 	
-    private static ThreadLocal<WebDriver> driver =
-            new ThreadLocal<>();
+    private static ThreadLocal<WebDriver> driver =  new ThreadLocal<>();
 
     public static void initDriver() {
 
-        String browser =
-                ConfigReader.getProperty("browser");
+        String browser =  ConfigReader.getProperty("browser");
 
         if (browser.equalsIgnoreCase("chrome")) {
 
             WebDriverManager.chromedriver().setup();
 
-            ChromeOptions options =
-                    new ChromeOptions();
+            ChromeOptions options =  new ChromeOptions();
 
             options.addArguments("--start-maximized");
 
@@ -32,15 +29,15 @@ public class DriverFactory {
         }
 
         getDriver().manage().timeouts()
-                .implicitlyWait(
-                        Duration.ofSeconds(
-                                Integer.parseInt(
-                                        ConfigReader.getProperty(
-                                                "implicitWait"
-                                        )
+        .implicitlyWait(
+                Duration.ofSeconds(
+                        Integer.parseInt(
+                                ConfigReader.getProperty(
+                                        "implicitWait"
                                 )
                         )
-                );
+                )
+        );
     }
 
     public static WebDriver getDriver() {

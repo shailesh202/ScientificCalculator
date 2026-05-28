@@ -1,5 +1,54 @@
 package utils;
 
+import factory.DriverFactory;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+
+import constants.FrameworkConstants;
+
+import java.io.File;
+import java.io.IOException;
+
 public class ScreenshotUtils {
+	
+	public static String captureScreenshot(
+            String testName) {
+
+        File src =
+                ((TakesScreenshot)
+                        DriverFactory.getDriver())
+                        .getScreenshotAs(
+                                OutputType.FILE
+                        );
+
+        File directory =
+                new File(
+                        FrameworkConstants.SCREENSHOT_PATH
+                );
+
+        if (!directory.exists()) {
+
+            directory.mkdirs();
+        }
+
+        String path =
+                FrameworkConstants.SCREENSHOT_PATH
+                + testName
+                + ".png";
+        
+        File dest = new File(path);
+
+        try {
+
+            FileUtils.copyFile(src, dest);
+
+        } catch (IOException e) {
+
+            e.printStackTrace();
+        }
+
+        return path;
+    }
 
 }
