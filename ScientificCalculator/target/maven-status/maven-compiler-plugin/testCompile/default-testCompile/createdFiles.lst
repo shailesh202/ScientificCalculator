@@ -1,0 +1,5 @@
+testcases/BasicOperationsTest.class
+testcases/ScientificOperationsTest.class
+testcases/NegativeScenariosTest.class
+testcases/BoundaryValueTest.class
+testcases/BaseTest.class
