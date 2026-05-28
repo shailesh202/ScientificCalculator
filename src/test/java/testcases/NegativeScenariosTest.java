@@ -14,7 +14,7 @@ public class NegativeScenariosTest extends BaseTest {
         calculator = new CalculatorPage();
     }
 
-    @Test
+    @Test(priority = 1, groups = {"sanity"}, description =  "verify Divide By Zero")
     public void verifyDivideByZero() throws Exception {
 
         calculator.performCalculation("10", "÷", "0");
@@ -27,7 +27,7 @@ public class NegativeScenariosTest extends BaseTest {
         );
     }
 
-    @Test
+    @Test(priority = 1, groups = {"sanity"}, description =  "verify Invalid Input")
     public void verifyInvalidInput() throws Exception {
 
         calculator.enterInvalidInput("@");
@@ -41,7 +41,7 @@ public class NegativeScenariosTest extends BaseTest {
         );
     }
 
-    @Test
+    @Test(priority = 1, groups = {"sanity"}, description =  "verify Repeated Operators")
     public void verifyRepeatedOperators() {
 
         calculator.enterNumber("5");
@@ -63,7 +63,7 @@ public class NegativeScenariosTest extends BaseTest {
         );
     }
 
-    @Test
+    @Test(priority = 1, groups = {"sanity"}, description =  "verify Empty Calculation")
     public void verifyEmptyCalculation() {
 
         calculator.clickEquals();

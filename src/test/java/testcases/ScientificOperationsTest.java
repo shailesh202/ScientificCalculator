@@ -14,7 +14,7 @@ public class ScientificOperationsTest extends BaseTest  {
         calculator = new CalculatorPage();
     }
 
-    @Test
+    @Test(priority = 1, groups = {"sanity"}, description =  "verify Square Root Operation")
     public void verifySquareRootOperation() {
 
     	calculator.enterNumber("25");
@@ -29,7 +29,7 @@ public class ScientificOperationsTest extends BaseTest  {
         );
     }
 
-    @Test
+    @Test(priority = 1, groups = {"sanity"}, description =  "verify Percentage Operation")
     public void verifyPercentageOperation() {
 
         calculator.enterNumber("10");
@@ -46,7 +46,7 @@ public class ScientificOperationsTest extends BaseTest  {
         );
     }
 
-//    @Test
+//    @Test(priority = 1, groups = {"sanity"}, description =  "verify Power Operation")
 //    public void verifyPowerOperation() {
 //
 //        calculator.enterNumber("2");
@@ -63,7 +63,7 @@ public class ScientificOperationsTest extends BaseTest  {
 //        );
 //    }
 
-    @Test
+    @Test(priority = 1, groups = {"sanity"}, description =  "verify Sin Operation")
     public void verifySinOperation() {
 
     	calculator.enterNumber("90");
@@ -81,7 +81,7 @@ public class ScientificOperationsTest extends BaseTest  {
         Assert.assertEquals(actual, 1.0, 0.01);
     }
 
-    @Test
+    @Test(priority = 1, groups = {"sanity"}, description =  "verify Cos Operation")
     public void verifyCosOperation() {
 
         calculator.enterNumber("45");
@@ -98,7 +98,7 @@ public class ScientificOperationsTest extends BaseTest  {
         Assert.assertEquals(result, "0.5253219888177297");
     }
 
-    @Test
+    @Test(priority = 1, groups = {"sanity"}, description =  "verify tan Operation")
     public void verifyMemoryStoreAndRecallqq() {
 
         calculator.enterNumber("120");

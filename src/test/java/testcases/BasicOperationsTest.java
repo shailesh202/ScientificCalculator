@@ -15,7 +15,7 @@ public class BasicOperationsTest extends BaseTest {
 	        calculator = new CalculatorPage();
 	    }
 
-	    @Test(priority = 1, description =  "Verify the addition of two numbers")
+	    @Test(priority = 1, groups = {"regression"}, description =  "Verify the addition of two numbers")
 	    public void verifyAddition() throws Exception {
 
 	      calculator.performCalculation("5", "+", "2");
@@ -23,18 +23,18 @@ public class BasicOperationsTest extends BaseTest {
 	        Assert.assertEquals(calculator.getDisplayedValue(), "7");
 	    }
 
-//	    @Test(priority = 2, description =  "Verify the Subtraction of two numbers")
-//	    public void verifySubtraction() throws Exception {
-//
-//	        calculator.performCalculation("10", "−", "4");
-//
-//	        Assert.assertEquals(
-//	                calculator.getDisplayedValue(),
-//	                "0.4" // some issue with application selector
-//	        );
-//	    }
+	    @Test(priority = 2, groups = {"regression"}, description =  "Verify the Subtraction of two numbers")
+	    public void verifySubtraction() throws Exception {
 
-//	    @Test(priority = 3, description =  "Verify the multiplication of two numbers")
+	        calculator.performCalculation("10", "−", "4");
+
+	        Assert.assertEquals(
+	                calculator.getDisplayedValue(),
+	                "0.4" // some issue with application selector
+	        );
+	    }
+
+//	    @Test(priority = 3, groups = {"regression"}, description =  "Verify the multiplication of two numbers")
 //	    public void verifyMultiplication() throws Exception {
 //
 //	        calculator.performCalculation("7", "×", "6");
@@ -46,7 +46,7 @@ public class BasicOperationsTest extends BaseTest {
 //	        );
 //	    }
 //
-//	    @Test(priority = 4, description =  "Verify the devision of two numbers")
+//	    @Test(priority = 4, groups = {"regression"}, description =  "Verify the devision of two numbers")
 //	    public void verifyDivision() throws Exception {
 //
 //	        calculator.performCalculation("6", "÷", "18");
@@ -57,7 +57,7 @@ public class BasicOperationsTest extends BaseTest {
 //	        );
 //	    }
 
-//	    @Test(priority = 5, description =  "Verify the calculation of two decimal numbers")
+//	    @Test(priority = 5, groups = {"sanity"}, description =  "Verify the calculation of two decimal numbers")
 //	    public void verifyDecimalCalculation() throws Exception {
 //
 //	        calculator.performCalculation("5.5", "+", "2.2");
@@ -68,7 +68,7 @@ public class BasicOperationsTest extends BaseTest {
 //	        );
 //	    }
 
-//	    @Test(priority = 6, description =  "Verify the BOSMAD calculation of three or more numbers")
+//	    @Test(priority = 6, groups = {"sanity"}, description =  "Verify the BOSMAD calculation of three or more numbers")
 //	    public void verifyMultipleChainedOperations() throws Exception {
 //
 //	        calculator.enterNumber("5");

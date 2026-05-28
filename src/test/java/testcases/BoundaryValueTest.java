@@ -14,7 +14,7 @@ public class BoundaryValueTest extends BaseTest {
         calculator = new CalculatorPage();
     }
 
-    @Test
+    @Test(priority = 1, groups = {"regression"}, description =  "Verify verify Large Number Calculation")
     public void verifyLargeNumberCalculation() throws Exception {
 
         calculator.performCalculation(
@@ -29,7 +29,7 @@ public class BoundaryValueTest extends BaseTest {
         );
     }
 
-    @Test
+    @Test(priority = 1, groups = {"sanity"}, description =  "verify Floating Point Precision")
     public void verifyFloatingPointPrecision() throws Exception {
 
         calculator.performCalculation(
@@ -49,7 +49,7 @@ public class BoundaryValueTest extends BaseTest {
         );
     }
     
-    @Test
+    @Test(priority = 1, groups = {"sanity"}, description =  "verify Consecutive Decimal Points")
     public void verifyConsecutiveDecimalPoints() {
 
         calculator.enterNumber("5");
@@ -72,7 +72,7 @@ public class BoundaryValueTest extends BaseTest {
         );
     }
 
-    @Test
+    @Test(priority = 1, groups = {"sanity"}, description =  "verify Rapid Button Clicking On Number")
     public void verifyRapidButtonClickingOnNumber() {
 
         for (int i = 0; i < 20; i++) {
@@ -88,7 +88,7 @@ public class BoundaryValueTest extends BaseTest {
   
     }
     
-    @Test
+    @Test(priority = 1, groups = {"sanity"}, description =  "verify Rapid Button Clicking On Non Number")
     public void verifyRapidButtonClickingOnNonNumber() {
 
         for (int i = 0; i < 20; i++) {
@@ -99,7 +99,7 @@ public class BoundaryValueTest extends BaseTest {
   
     }
     
-    @Test
+    @Test(priority = 1, groups = {"sanity"}, description =  "verify Rapid Button Clicking On Operator")
     public void verifyRapidButtonClickingOnNoOperator() {
 
         for (int i = 0; i < 20; i++) {

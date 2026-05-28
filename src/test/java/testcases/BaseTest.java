@@ -15,7 +15,7 @@ public class BaseTest {
         DriverFactory.initDriver();
 
         DriverFactory.getDriver().get(
-                ConfigReader.getProperty("url"));
+                ConfigReader.getProperty("applicationUrl"));
     }
     
     @AfterMethod
