@@ -29,7 +29,7 @@ public class BoundaryValueTest extends BaseTest {
         );
     }
 
-    @Test(priority = 1, groups = {"sanity"}, description =  "verify Floating Point Precision")
+    @Test(priority = 1, groups = {"sanity", "regression"}, description =  "verify Floating Point Precision")
     public void verifyFloatingPointPrecision() throws Exception {
 
         calculator.performCalculation(
@@ -49,7 +49,7 @@ public class BoundaryValueTest extends BaseTest {
         );
     }
     
-    @Test(priority = 1, groups = {"sanity"}, description =  "verify Consecutive Decimal Points")
+    @Test(priority = 1, groups = {"sanity", "regression"}, description =  "verify Consecutive Decimal Points")
     public void verifyConsecutiveDecimalPoints() {
 
         calculator.enterNumber("5");

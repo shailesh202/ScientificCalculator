@@ -9,7 +9,7 @@ import utils.ConfigReader;
 
 public class BaseTest {
 	
-    @BeforeMethod
+	@BeforeMethod(alwaysRun = true)
     public void setup() {
 
         DriverFactory.initDriver();
@@ -18,10 +18,19 @@ public class BaseTest {
                 ConfigReader.getProperty("applicationUrl"));
     }
     
-    @AfterMethod
+//    @AfterMethod
+//    public void tearDown() {
+//
+//        DriverFactory.quitDriver();
+//    }
+    
+    @AfterMethod(alwaysRun = true)
     public void tearDown() {
 
-        DriverFactory.quitDriver();
+        if (DriverFactory.getDriver() != null) {
+
+            DriverFactory.quitDriver();
+        }
     }
 
 }

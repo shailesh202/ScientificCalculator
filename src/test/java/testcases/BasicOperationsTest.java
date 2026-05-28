@@ -15,7 +15,7 @@ public class BasicOperationsTest extends BaseTest {
 	        calculator = new CalculatorPage();
 	    }
 
-	    @Test(priority = 1, groups = {"regression"}, description =  "Verify the addition of two numbers")
+	    @Test(priority = 1, groups = {"regression", "sanity"}, description =  "Verify the addition of two numbers")
 	    public void verifyAddition() throws Exception {
 
 	      calculator.performCalculation("5", "+", "2");

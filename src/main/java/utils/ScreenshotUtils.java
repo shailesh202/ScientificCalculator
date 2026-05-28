@@ -14,6 +14,15 @@ public class ScreenshotUtils {
 	
 	public static String captureScreenshot(
             String testName) {
+		
+		  if (DriverFactory.getDriver() == null) {
+
+		        System.out.println(
+		                "Driver is null. Screenshot skipped."
+		        );
+
+		        return "";
+		    }
 
         File src =
                 ((TakesScreenshot)
@@ -22,15 +31,15 @@ public class ScreenshotUtils {
                                 OutputType.FILE
                         );
 
-        File directory =
-                new File(
-                        FrameworkConstants.SCREENSHOT_PATH
-                );
-
-        if (!directory.exists()) {
-
-            directory.mkdirs();
-        }
+//        File directory =
+//                new File(
+//                        FrameworkConstants.SCREENSHOT_PATH
+//                );
+//
+//        if (!directory.exists()) {
+//
+//            directory.mkdirs();
+//        }
 
         String path =
                 FrameworkConstants.SCREENSHOT_PATH

@@ -60,7 +60,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="group-Scientific_Calculator_Regression_Suite" class="navigator-link ">
-                    <span>0 groups</span>
+                    <span>2 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,6 +104,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Scientific_Calculator_Regression_Suite" title="testcases.BasicOperationsTest" class="method navigator-link" hash-for-method="verifyAddition">verifyAddition</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Scientific_Calculator_Regression_Suite" title="testcases.BasicOperationsTest" class="method navigator-link" hash-for-method="verifySubtraction">verifySubtraction</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Scientific_Calculator_Regression_Suite -->
@@ -131,6 +136,15 @@
                   <span class="method-name">verifyAddition</span>
                   <em>
 (Verify the addition of two numbers)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySubtraction">
+                  </a> <!-- verifySubtraction -->
+                  <span class="method-name">verifySubtraction</span>
+                  <em>
+(Verify the Subtraction of two numbers)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -174,6 +188,26 @@
             <span class="header-content">Groups for Scientific Calculator Regression Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">regression</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyAddition</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifySubtraction</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">sanity</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyAddition</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-Scientific_Calculator_Regression_Suite" class="panel">
@@ -190,16 +224,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verifyAddition')
 data.setCell(0, 2, 'testcases.BasicOperationsTest')
-data.setCell(0, 3, 14000);
+data.setCell(0, 3, 13928);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'verifySubtraction')
+data.setCell(1, 2, 'testcases.BasicOperationsTest')
+data.setCell(1, 3, 13904);
 window.suiteTableData['Scientific_Calculator_Regression_Suite']= { tableData: data, tableDiv: 'times-div-Scientific_Calculator_Regression_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 14 seconds</span>
+              <span class="suite-total-time">Total running time: 27 seconds</span>
               <div id="times-div-Scientific_Calculator_Regression_Suite">
               </div> <!-- times-div-Scientific_Calculator_Regression_Suite -->
             </div> <!-- times-div -->
@@ -232,15 +270,31 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">initPage</span>
-                <span class="method-start">10741 ms</span>
+                <span class="method-start">10082 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyAddition</span>
-                <span class="method-start">10742 ms</span>
+                <span class="method-start">10083 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">24771 ms</span>
+                <span class="method-start">24021 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">34156 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifySubtraction</span>
+                <span class="method-start">43344 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">initPage</span>
+                <span class="method-start">43344 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">57249 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

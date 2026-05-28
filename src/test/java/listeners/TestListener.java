@@ -4,6 +4,7 @@ package listeners;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
+import utils.ConfigReader;
 import utils.ExtentManager;
 import utils.ScreenshotUtils;
 
@@ -20,6 +21,18 @@ public class TestListener implements ITestListener {
 	    ThreadLocal<ExtentTest> test =
 	            new ThreadLocal<>();
 
+//	    @Override
+//	    public void onTestStart(ITestResult result) {
+//
+//	        ExtentTest extentTest =
+//	                extent.createTest(
+//	                        result.getMethod()
+//	                                .getMethodName()
+//	                );
+//
+//	        test.set(extentTest);
+//	    }
+	    
 	    @Override
 	    public void onTestStart(ITestResult result) {
 
@@ -28,6 +41,21 @@ public class TestListener implements ITestListener {
 	                        result.getMethod()
 	                                .getMethodName()
 	                );
+
+	        String[] groups =
+	                result.getMethod()
+	                        .getGroups();
+
+	        for (String group : groups) {
+
+	            extentTest.assignCategory(group);
+	        }
+
+	        extentTest.assignAuthor("Shailesh");
+
+	        extentTest.assignDevice(
+	                ConfigReader.getProperty("browser")
+	        );
 
 	        test.set(extentTest);
 	    }
@@ -49,9 +77,15 @@ public class TestListener implements ITestListener {
 	                                .getMethodName()
 	                );
 
-	        test.get().fail(
-	                result.getThrowable()
-	        );
+//	        test.get().fail(
+//	                result.getThrowable()
+//	        );
+	        if (!screenshotPath.isEmpty()) {
+
+	            test.get().addScreenCaptureFromPath(
+	                    screenshotPath
+	            );
+	        }
 
 	        try {
 

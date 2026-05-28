@@ -1,25 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-05-28T18:36:49 IST" name="Scientific Calculator Regression Suite" finished-at="2026-05-28T18:37:23 IST" duration-ms="34942">
+  <suite started-at="2026-05-28T19:57:58 IST" name="Scientific Calculator Regression Suite" finished-at="2026-05-28T19:59:06 IST" duration-ms="67398">
     <groups>
+      <group name="regression">
+        <method signature="BasicOperationsTest.verifyAddition()[pri:1, instance:testcases.BasicOperationsTest@cecf639]" name="verifyAddition" class="testcases.BasicOperationsTest"/>
+        <method signature="BasicOperationsTest.verifySubtraction()[pri:2, instance:testcases.BasicOperationsTest@cecf639]" name="verifySubtraction" class="testcases.BasicOperationsTest"/>
+      </group> <!-- regression -->
+      <group name="sanity">
+        <method signature="BasicOperationsTest.verifyAddition()[pri:1, instance:testcases.BasicOperationsTest@cecf639]" name="verifyAddition" class="testcases.BasicOperationsTest"/>
+      </group> <!-- sanity -->
     </groups>
-    <test started-at="2026-05-28T18:36:49 IST" name="All Calculator Tests" finished-at="2026-05-28T18:37:23 IST" duration-ms="34942">
+    <test started-at="2026-05-28T19:57:58 IST" name="All Calculator Tests" finished-at="2026-05-28T19:59:06 IST" duration-ms="67398">
       <class name="testcases.BasicOperationsTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.BasicOperationsTest@14028087]" started-at="2026-05-28T18:36:49 IST" name="setup" finished-at="2026-05-28T18:36:59 IST" duration-ms="10741" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.BasicOperationsTest@cecf639]" started-at="2026-05-28T19:57:58 IST" name="setup" finished-at="2026-05-28T19:58:08 IST" duration-ms="10082" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="initPage()[pri:0, instance:testcases.BasicOperationsTest@14028087]" started-at="2026-05-28T18:36:59 IST" name="initPage" finished-at="2026-05-28T18:36:59 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="initPage()[pri:0, instance:testcases.BasicOperationsTest@cecf639]" started-at="2026-05-28T19:58:08 IST" name="initPage" finished-at="2026-05-28T19:58:08 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initPage -->
-        <test-method signature="verifyAddition()[pri:1, instance:testcases.BasicOperationsTest@14028087]" started-at="2026-05-28T18:36:59 IST" name="verifyAddition" description="Verify the addition of two numbers" finished-at="2026-05-28T18:37:13 IST" duration-ms="14000" status="PASS">
+        <test-method signature="verifyAddition()[pri:1, instance:testcases.BasicOperationsTest@cecf639]" started-at="2026-05-28T19:58:08 IST" name="verifyAddition" description="Verify the addition of two numbers" finished-at="2026-05-28T19:58:22 IST" duration-ms="13928" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAddition -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.BasicOperationsTest@14028087]" started-at="2026-05-28T18:37:13 IST" name="tearDown" finished-at="2026-05-28T18:37:23 IST" duration-ms="10150" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.BasicOperationsTest@cecf639]" started-at="2026-05-28T19:58:22 IST" name="tearDown" finished-at="2026-05-28T19:58:32 IST" duration-ms="10126" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.BasicOperationsTest@cecf639]" started-at="2026-05-28T19:58:32 IST" name="setup" finished-at="2026-05-28T19:58:42 IST" duration-ms="9187" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifySubtraction()[pri:2, instance:testcases.BasicOperationsTest@cecf639]" started-at="2026-05-28T19:58:42 IST" name="verifySubtraction" description="Verify the Subtraction of two numbers" finished-at="2026-05-28T19:58:55 IST" duration-ms="13904" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySubtraction -->
+        <test-method is-config="true" signature="initPage()[pri:0, instance:testcases.BasicOperationsTest@cecf639]" started-at="2026-05-28T19:58:42 IST" name="initPage" finished-at="2026-05-28T19:58:42 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.BasicOperationsTest@cecf639]" started-at="2026-05-28T19:58:55 IST" name="tearDown" finished-at="2026-05-28T19:59:06 IST" duration-ms="10125" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

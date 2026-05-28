@@ -22,7 +22,7 @@
 
         <packages>
 
-            <package name="tests"/>
+            <package name="testcases"/>
 
         </packages>
 
