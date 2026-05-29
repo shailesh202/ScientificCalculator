@@ -23,26 +23,18 @@ public class TestListener implements ITestListener {
     @Override
     public void onStart(ITestContext context) {
 
-        System.out.println(
-                "Execution Started"
-        );
+        System.out.println("Execution Started");
     }
 
     @Override
     public void onTestStart(ITestResult result) {
 
-        ExtentTest extentTest =
-                extent.createTest(
-                        result.getMethod()
-                                .getMethodName()
-                );
+        ExtentTest extentTest = extent.createTest(result.getMethod().getMethodName());
 
         /*
             Assign Groups
          */
-        String[] groups =
-                result.getMethod()
-                        .getGroups();
+        String[] groups = result.getMethod().getGroups();
 
         for (String group : groups) {
 
@@ -55,44 +47,25 @@ public class TestListener implements ITestListener {
     @Override
     public void onTestSuccess(ITestResult result) {
 
-        test.get().log(
-                Status.PASS,
-                "Test Passed"
-        );
+        test.get().log( Status.PASS,"Test Passed");
     }
 
     @Override
     public void onTestFailure(ITestResult result) {
 
-        test.get().log(
-                Status.FAIL,
-                "Test Failed"
-        );
+        test.get().log( Status.FAIL,"Test Failed");
 
-        /*
-            Log Exception
-         */
-        test.get().fail(
-                result.getThrowable()
-        );
+        // Log Exception
+        test.get().fail(result.getThrowable());
 
-        /*
-            Capture Screenshot
-         */
-        String screenshotPath =
-                ScreenshotUtils.captureScreenshot(
-                        result.getMethod()
-                                .getMethodName()
-                );
+        // Capture Screenshot
+        String screenshotPath = ScreenshotUtils.captureScreenshot(result.getMethod().getMethodName() );
 
         try {
 
             if (!screenshotPath.isEmpty()) {
 
-                test.get()
-                        .addScreenCaptureFromPath(
-                                screenshotPath
-                        );
+                test.get().addScreenCaptureFromPath(screenshotPath);
             }
 
         } catch (Exception e) {
@@ -112,8 +85,7 @@ public class TestListener implements ITestListener {
 
         extent.flush();
 
-        System.out.println(
-                "Execution Completed");
+        System.out.println( "Execution Completed");
     }
 
 }
