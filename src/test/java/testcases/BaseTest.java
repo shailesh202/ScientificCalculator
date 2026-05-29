@@ -18,12 +18,6 @@ public class BaseTest {
                 ConfigReader.getProperty("applicationUrl"));
     }
     
-//    @AfterMethod
-//    public void tearDown() {
-//
-//        DriverFactory.quitDriver();
-//    }
-    
     @AfterMethod(alwaysRun = true)
     public void tearDown() {
 

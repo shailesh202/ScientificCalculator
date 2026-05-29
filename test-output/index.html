@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Scientific_Calculator_Regression_Suite" class="navigator-link">
-              <span class="suite-name border-skipped">Scientific Calculator Regression Suite</span>
+              <span class="suite-name border-failed">Scientific Calculator Regression Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,26 +92,130 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,  2 skipped,  </span>
+                    <span class="method-stats">21 methods, 2 failed,   19 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Scientific_Calculator_Regression_Suite" class="hide-methods skipped suite-Scientific_Calculator_Regression_Suite"> (hide)</a> <!-- hide-methods skipped suite-Scientific_Calculator_Regression_Suite -->
-                      <a href="#" panel-name="suite-Scientific_Calculator_Regression_Suite" class="show-methods skipped suite-Scientific_Calculator_Regression_Suite"> (show)</a> <!-- show-methods skipped suite-Scientific_Calculator_Regression_Suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Scientific_Calculator_Regression_Suite" class="hide-methods failed suite-Scientific_Calculator_Regression_Suite"> (hide)</a> <!-- hide-methods failed suite-Scientific_Calculator_Regression_Suite -->
+                      <a href="#" panel-name="suite-Scientific_Calculator_Regression_Suite" class="show-methods failed suite-Scientific_Calculator_Regression_Suite"> (show)</a> <!-- show-methods failed suite-Scientific_Calculator_Regression_Suite -->
                     </span>
-                    <div class="method-list-content skipped suite-Scientific_Calculator_Regression_Suite">
+                    <div class="method-list-content failed suite-Scientific_Calculator_Regression_Suite">
                       <span>
-                        <img src="skipped.png" width="3%"/>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Scientific_Calculator_Regression_Suite" title="testcases.BasicOperationsTest" class="method navigator-link" hash-for-method="verifyDivision">verifyDivision</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Scientific_Calculator_Regression_Suite" title="testcases.BasicOperationsTest" class="method navigator-link" hash-for-method="verifySubtraction">verifySubtraction</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Scientific_Calculator_Regression_Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Scientific_Calculator_Regression_Suite" class="hide-methods passed suite-Scientific_Calculator_Regression_Suite"> (hide)</a> <!-- hide-methods passed suite-Scientific_Calculator_Regression_Suite -->
+                      <a href="#" panel-name="suite-Scientific_Calculator_Regression_Suite" class="show-methods passed suite-Scientific_Calculator_Regression_Suite"> (show)</a> <!-- show-methods passed suite-Scientific_Calculator_Regression_Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Scientific_Calculator_Regression_Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Scientific_Calculator_Regression_Suite" title="testcases.BasicOperationsTest" class="method navigator-link" hash-for-method="verifyAddition">verifyAddition</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Scientific_Calculator_Regression_Suite" title="testcases.BasicOperationsTest" class="method navigator-link" hash-for-method="verifySubtraction">verifySubtraction</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Scientific_Calculator_Regression_Suite" title="testcases.BoundaryValueTest" class="method navigator-link" hash-for-method="verifyConsecutiveDecimalPoints">verifyConsecutiveDecimalPoints</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content skipped suite-Scientific_Calculator_Regression_Suite -->
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Scientific_Calculator_Regression_Suite" title="testcases.ScientificOperationsTest" class="method navigator-link" hash-for-method="verifyCosOperation">verifyCosOperation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Scientific_Calculator_Regression_Suite" title="testcases.BasicOperationsTest" class="method navigator-link" hash-for-method="verifyDecimalCalculation">verifyDecimalCalculation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Scientific_Calculator_Regression_Suite" title="testcases.NegativeScenariosTest" class="method navigator-link" hash-for-method="verifyDivideByZero">verifyDivideByZero</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Scientific_Calculator_Regression_Suite" title="testcases.NegativeScenariosTest" class="method navigator-link" hash-for-method="verifyEmptyCalculation">verifyEmptyCalculation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Scientific_Calculator_Regression_Suite" title="testcases.BoundaryValueTest" class="method navigator-link" hash-for-method="verifyFloatingPointPrecision">verifyFloatingPointPrecision</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Scientific_Calculator_Regression_Suite" title="testcases.NegativeScenariosTest" class="method navigator-link" hash-for-method="verifyInvalidInput">verifyInvalidInput</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Scientific_Calculator_Regression_Suite" title="testcases.BoundaryValueTest" class="method navigator-link" hash-for-method="verifyLargeNumberCalculation">verifyLargeNumberCalculation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Scientific_Calculator_Regression_Suite" title="testcases.ScientificOperationsTest" class="method navigator-link" hash-for-method="verifyMemoryStoreAndRecallqq">verifyMemoryStoreAndRecallqq</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Scientific_Calculator_Regression_Suite" title="testcases.BasicOperationsTest" class="method navigator-link" hash-for-method="verifyMultipleChainedOperations">verifyMultipleChainedOperations</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Scientific_Calculator_Regression_Suite" title="testcases.BasicOperationsTest" class="method navigator-link" hash-for-method="verifyMultiplication">verifyMultiplication</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Scientific_Calculator_Regression_Suite" title="testcases.ScientificOperationsTest" class="method navigator-link" hash-for-method="verifyPercentageOperation">verifyPercentageOperation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Scientific_Calculator_Regression_Suite" title="testcases.BoundaryValueTest" class="method navigator-link" hash-for-method="verifyRapidButtonClickingOnNoOperator">verifyRapidButtonClickingOnNoOperator</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Scientific_Calculator_Regression_Suite" title="testcases.BoundaryValueTest" class="method navigator-link" hash-for-method="verifyRapidButtonClickingOnNonNumber">verifyRapidButtonClickingOnNonNumber</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Scientific_Calculator_Regression_Suite" title="testcases.BoundaryValueTest" class="method navigator-link" hash-for-method="verifyRapidButtonClickingOnNumber">verifyRapidButtonClickingOnNumber</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Scientific_Calculator_Regression_Suite" title="testcases.NegativeScenariosTest" class="method navigator-link" hash-for-method="verifyRepeatedOperators">verifyRepeatedOperators</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Scientific_Calculator_Regression_Suite" title="testcases.ScientificOperationsTest" class="method navigator-link" hash-for-method="verifySinOperation">verifySinOperation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Scientific_Calculator_Regression_Suite" title="testcases.ScientificOperationsTest" class="method navigator-link" hash-for-method="verifySquareRootOperation">verifySquareRootOperation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Scientific_Calculator_Regression_Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -123,9 +227,212 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Scientific_Calculator_Regression_Suite" class="panel Scientific_Calculator_Regression_Suite">
-          <div class="suite-Scientific_Calculator_Regression_Suite-class-skipped">
+          <div class="suite-Scientific_Calculator_Regression_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
+              <img src="failed.png"/>
+              <span class="class-name">testcases.BasicOperationsTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyDivision">
+                  </a> <!-- verifyDivision -->
+                  <span class="method-name">verifyDivision</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [3] but found [0.3333333333333333]
+	at testcases.BasicOperationsTest.verifyDivision(BasicOperationsTest.java:47)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+... Removed 19 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Verify the devision of two numbers)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySubtraction">
+                  </a> <!-- verifySubtraction -->
+                  <span class="method-name">verifySubtraction</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [6] but found [0.4]
+	at testcases.BasicOperationsTest.verifySubtraction(BasicOperationsTest.java:31)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+... Removed 19 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Verify the Subtraction of two numbers)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Scientific_Calculator_Regression_Suite-class-failed -->
+          <div class="suite-Scientific_Calculator_Regression_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.NegativeScenariosTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyDivideByZero">
+                  </a> <!-- verifyDivideByZero -->
+                  <span class="method-name">verifyDivideByZero</span>
+                  <em>
+(verify Divide By Zero)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyEmptyCalculation">
+                  </a> <!-- verifyEmptyCalculation -->
+                  <span class="method-name">verifyEmptyCalculation</span>
+                  <em>
+(verify Empty Calculation)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyInvalidInput">
+                  </a> <!-- verifyInvalidInput -->
+                  <span class="method-name">verifyInvalidInput</span>
+                  <em>
+(verify Invalid Input)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyRepeatedOperators">
+                  </a> <!-- verifyRepeatedOperators -->
+                  <span class="method-name">verifyRepeatedOperators</span>
+                  <em>
+(verify Repeated Operators)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Scientific_Calculator_Regression_Suite-class-passed -->
+          <div class="suite-Scientific_Calculator_Regression_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.BoundaryValueTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyConsecutiveDecimalPoints">
+                  </a> <!-- verifyConsecutiveDecimalPoints -->
+                  <span class="method-name">verifyConsecutiveDecimalPoints</span>
+                  <em>
+(verify Consecutive Decimal Points)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyFloatingPointPrecision">
+                  </a> <!-- verifyFloatingPointPrecision -->
+                  <span class="method-name">verifyFloatingPointPrecision</span>
+                  <em>
+(verify Floating Point Precision)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLargeNumberCalculation">
+                  </a> <!-- verifyLargeNumberCalculation -->
+                  <span class="method-name">verifyLargeNumberCalculation</span>
+                  <em>
+(Verify verify Large Number Calculation)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyRapidButtonClickingOnNoOperator">
+                  </a> <!-- verifyRapidButtonClickingOnNoOperator -->
+                  <span class="method-name">verifyRapidButtonClickingOnNoOperator</span>
+                  <em>
+(verify Rapid Button Clicking On Operator)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyRapidButtonClickingOnNonNumber">
+                  </a> <!-- verifyRapidButtonClickingOnNonNumber -->
+                  <span class="method-name">verifyRapidButtonClickingOnNonNumber</span>
+                  <em>
+(verify Rapid Button Clicking On Non Number)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyRapidButtonClickingOnNumber">
+                  </a> <!-- verifyRapidButtonClickingOnNumber -->
+                  <span class="method-name">verifyRapidButtonClickingOnNumber</span>
+                  <em>
+(verify Rapid Button Clicking On Number)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Scientific_Calculator_Regression_Suite-class-passed -->
+          <div class="suite-Scientific_Calculator_Regression_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.ScientificOperationsTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyCosOperation">
+                  </a> <!-- verifyCosOperation -->
+                  <span class="method-name">verifyCosOperation</span>
+                  <em>
+(verify Cos Operation)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyMemoryStoreAndRecallqq">
+                  </a> <!-- verifyMemoryStoreAndRecallqq -->
+                  <span class="method-name">verifyMemoryStoreAndRecallqq</span>
+                  <em>
+(verify tan Operation)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyPercentageOperation">
+                  </a> <!-- verifyPercentageOperation -->
+                  <span class="method-name">verifyPercentageOperation</span>
+                  <em>
+(verify Percentage Operation)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySinOperation">
+                  </a> <!-- verifySinOperation -->
+                  <span class="method-name">verifySinOperation</span>
+                  <em>
+(verify Sin Operation)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySquareRootOperation">
+                  </a> <!-- verifySquareRootOperation -->
+                  <span class="method-name">verifySquareRootOperation</span>
+                  <em>
+(verify Square Root Operation)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Scientific_Calculator_Regression_Suite-class-passed -->
+          <div class="suite-Scientific_Calculator_Regression_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
               <span class="class-name">testcases.BasicOperationsTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -134,51 +441,39 @@
                   <a name="verifyAddition">
                   </a> <!-- verifyAddition -->
                   <span class="method-name">verifyAddition</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at java.base/java.util.Objects.requireNonNull(Objects.java:208)
-	at java.base/java.util.ImmutableCollections$Map1.&lt;init&gt;(ImmutableCollections.java:1105)
-	at java.base/java.util.Map.of(Map.java:1353)
-	at org.openqa.selenium.remote.DriverCommand.GET(DriverCommand.java:180)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:300)
-	at factory.DriverFactory.initDriver(DriverFactory.java:32)
-	at testcases.BaseTest.setup(BaseTest.java:15)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-... Removed 17 stack frames
-</div> <!-- stack-trace -->
                   <em>
 (Verify the addition of two numbers)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verifySubtraction">
-                  </a> <!-- verifySubtraction -->
-                  <span class="method-name">verifySubtraction</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at java.base/java.util.Objects.requireNonNull(Objects.java:208)
-	at java.base/java.util.ImmutableCollections$Map1.&lt;init&gt;(ImmutableCollections.java:1105)
-	at java.base/java.util.Map.of(Map.java:1353)
-	at org.openqa.selenium.remote.DriverCommand.GET(DriverCommand.java:180)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:300)
-	at factory.DriverFactory.initDriver(DriverFactory.java:32)
-	at testcases.BaseTest.setup(BaseTest.java:15)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-... Removed 17 stack frames
-</div> <!-- stack-trace -->
+                  <a name="verifyDecimalCalculation">
+                  </a> <!-- verifyDecimalCalculation -->
+                  <span class="method-name">verifyDecimalCalculation</span>
                   <em>
-(Verify the Subtraction of two numbers)                  </em>
+(Verify the calculation of two decimal numbers)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyMultipleChainedOperations">
+                  </a> <!-- verifyMultipleChainedOperations -->
+                  <span class="method-name">verifyMultipleChainedOperations</span>
+                  <em>
+(Verify the BOSMAD calculation of three or more numbers)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyMultiplication">
+                  </a> <!-- verifyMultiplication -->
+                  <span class="method-name">verifyMultiplication</span>
+                  <em>
+(Verify the multiplication of two numbers)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Scientific_Calculator_Regression_Suite-class-skipped -->
+          </div> <!-- suite-Scientific_Calculator_Regression_Suite-class-passed -->
         </div> <!-- panel Scientific_Calculator_Regression_Suite -->
         <div panel-name="test-xml-Scientific_Calculator_Regression_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -195,6 +490,9 @@
   &lt;test thread-count=&quot;4&quot; parallel=&quot;classes&quot; name=&quot;All Calculator Tests&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;testcases.BasicOperationsTest&quot;/&gt;
+      &lt;class name=&quot;testcases.ScientificOperationsTest&quot;/&gt;
+      &lt;class name=&quot;testcases.NegativeScenariosTest&quot;/&gt;
+      &lt;class name=&quot;testcases.BoundaryValueTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- All Calculator Tests --&gt;
 &lt;/suite&gt; &lt;!-- Scientific Calculator Regression Suite --&gt;
@@ -208,7 +506,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">All Calculator Tests (1 class)</span>
+                <span class="test-name">All Calculator Tests (4 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -226,6 +524,30 @@
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
+                <span class="method-in-group-name">verifyConsecutiveDecimalPoints</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyDivideByZero</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyDivision</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyFloatingPointPrecision</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyLargeNumberCalculation</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyMultiplication</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
                 <span class="method-in-group-name">verifySubtraction</span>
                 <br/>
               </div> <!-- method-in-group -->
@@ -235,6 +557,70 @@
               <br/>
               <div class="method-in-group">
                 <span class="method-in-group-name">verifyAddition</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyConsecutiveDecimalPoints</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyCosOperation</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyDecimalCalculation</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyDivideByZero</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyEmptyCalculation</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyFloatingPointPrecision</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyInvalidInput</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyMemoryStoreAndRecallqq</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyMultipleChainedOperations</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyPercentageOperation</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyRapidButtonClickingOnNoOperator</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyRapidButtonClickingOnNonNumber</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyRapidButtonClickingOnNumber</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyRepeatedOperators</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifySinOperation</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifySquareRootOperation</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -254,20 +640,96 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(21);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifySubtraction')
-data.setCell(0, 2, 'testcases.BasicOperationsTest')
-data.setCell(0, 3, 0);
+data.setCell(0, 1, 'verifyLargeNumberCalculation')
+data.setCell(0, 2, 'testcases.BoundaryValueTest')
+data.setCell(0, 3, 16102);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyAddition')
-data.setCell(1, 2, 'testcases.BasicOperationsTest')
-data.setCell(1, 3, 0);
+data.setCell(1, 1, 'verifyDivideByZero')
+data.setCell(1, 2, 'testcases.NegativeScenariosTest')
+data.setCell(1, 3, 15353);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'verifyAddition')
+data.setCell(2, 2, 'testcases.BasicOperationsTest')
+data.setCell(2, 3, 15278);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'verifySubtraction')
+data.setCell(3, 2, 'testcases.BasicOperationsTest')
+data.setCell(3, 3, 15022);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'verifyFloatingPointPrecision')
+data.setCell(4, 2, 'testcases.BoundaryValueTest')
+data.setCell(4, 3, 14972);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'verifyDivision')
+data.setCell(5, 2, 'testcases.BasicOperationsTest')
+data.setCell(5, 3, 14382);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'verifyDecimalCalculation')
+data.setCell(6, 2, 'testcases.BasicOperationsTest')
+data.setCell(6, 3, 14294);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'verifyMultiplication')
+data.setCell(7, 2, 'testcases.BasicOperationsTest')
+data.setCell(7, 3, 14269);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'verifyConsecutiveDecimalPoints')
+data.setCell(8, 2, 'testcases.BoundaryValueTest')
+data.setCell(8, 3, 2382);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'verifyCosOperation')
+data.setCell(9, 2, 'testcases.ScientificOperationsTest')
+data.setCell(9, 3, 2289);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'verifySquareRootOperation')
+data.setCell(10, 2, 'testcases.ScientificOperationsTest')
+data.setCell(10, 3, 2030);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'verifyRapidButtonClickingOnNumber')
+data.setCell(11, 2, 'testcases.BoundaryValueTest')
+data.setCell(11, 3, 1513);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'verifyMultipleChainedOperations')
+data.setCell(12, 2, 'testcases.BasicOperationsTest')
+data.setCell(12, 3, 1494);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'verifyRapidButtonClickingOnNonNumber')
+data.setCell(13, 2, 'testcases.BoundaryValueTest')
+data.setCell(13, 3, 1485);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'verifyMemoryStoreAndRecallqq')
+data.setCell(14, 2, 'testcases.ScientificOperationsTest')
+data.setCell(14, 3, 1470);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'verifyRapidButtonClickingOnNoOperator')
+data.setCell(15, 2, 'testcases.BoundaryValueTest')
+data.setCell(15, 3, 1470);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'verifyPercentageOperation')
+data.setCell(16, 2, 'testcases.ScientificOperationsTest')
+data.setCell(16, 3, 1409);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'verifySinOperation')
+data.setCell(17, 2, 'testcases.ScientificOperationsTest')
+data.setCell(17, 3, 1356);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'verifyInvalidInput')
+data.setCell(18, 2, 'testcases.NegativeScenariosTest')
+data.setCell(18, 3, 1347);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'verifyEmptyCalculation')
+data.setCell(19, 2, 'testcases.NegativeScenariosTest')
+data.setCell(19, 3, 1032);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'verifyRepeatedOperators')
+data.setCell(20, 2, 'testcases.NegativeScenariosTest')
+data.setCell(20, 3, 906);
 window.suiteTableData['Scientific_Calculator_Regression_Suite']= { tableData: data, tableDiv: 'times-div-Scientific_Calculator_Regression_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 0 ms</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Scientific_Calculator_Regression_Suite">
               </div> <!-- times-div-Scientific_Calculator_Regression_Suite -->
             </div> <!-- times-div -->
@@ -295,24 +757,479 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.BasicOperationsTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">setup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.ScientificOperationsTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.NegativeScenariosTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.BoundaryValueTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">1 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.NegativeScenariosTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initPage</span>
+                <span class="method-start">14877 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.ScientificOperationsTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initPage</span>
+                <span class="method-start">14877 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.BoundaryValueTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initPage</span>
+                <span class="method-start">14877 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.ScientificOperationsTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">verifyCosOperation</span>
+                <span class="method-start">14882 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.BoundaryValueTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">verifyConsecutiveDecimalPoints</span>
+                <span class="method-start">14882 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.NegativeScenariosTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">verifyDivideByZero</span>
+                <span class="method-start">14882 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.BasicOperationsTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">verifyAddition</span>
+                <span class="method-start">14883 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">initPage</span>
+                <span class="method-start">14883 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.ScientificOperationsTest</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">9720 ms</span>
+                <span class="method-start">17183 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.BoundaryValueTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">17265 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.ScientificOperationsTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">17312 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.BoundaryValueTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">17348 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.ScientificOperationsTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initPage</span>
+                <span class="method-start">27792 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyMemoryStoreAndRecallqq</span>
+                <span class="method-start">27792 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.BoundaryValueTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initPage</span>
+                <span class="method-start">27794 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyFloatingPointPrecision</span>
+                <span class="method-start">27794 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.ScientificOperationsTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">29263 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">29358 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.BasicOperationsTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">30162 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.NegativeScenariosTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">30235 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">34607 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.BasicOperationsTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">34861 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.ScientificOperationsTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initPage</span>
+                <span class="method-start">38594 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyPercentageOperation</span>
+                <span class="method-start">38595 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">40012 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">40130 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.BoundaryValueTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">42773 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.BasicOperationsTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initPage</span>
+                <span class="method-start">43422 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">setup</span>
-                <span class="method-start">9826 ms</span>
+                <span class="method-name">verifySubtraction</span>
+                <span class="method-start">43423 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.NegativeScenariosTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">verifyEmptyCalculation</span>
+                <span class="method-start">43424 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">initPage</span>
+                <span class="method-start">43424 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">18416 ms</span>
+                <span class="method-start">44457 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">44535 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.ScientificOperationsTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initPage</span>
+                <span class="method-start">49355 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifySinOperation</span>
+                <span class="method-start">49356 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">50715 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">50841 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.BoundaryValueTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">52920 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.NegativeScenariosTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initPage</span>
+                <span class="method-start">53125 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyInvalidInput</span>
+                <span class="method-start">53125 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">54474 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">54578 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.BasicOperationsTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">59391 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.ScientificOperationsTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initPage</span>
+                <span class="method-start">61612 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.BoundaryValueTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initPage</span>
+                <span class="method-start">61612 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.ScientificOperationsTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">verifySquareRootOperation</span>
+                <span class="method-start">61613 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.BoundaryValueTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">verifyLargeNumberCalculation</span>
+                <span class="method-start">61613 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.ScientificOperationsTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">63645 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.NegativeScenariosTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">verifyRepeatedOperators</span>
+                <span class="method-start">63679 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">initPage</span>
+                <span class="method-start">63679 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">64586 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.BasicOperationsTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">69566 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.BoundaryValueTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">77717 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.BasicOperationsTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">verifyMultiplication</span>
+                <span class="method-start">78181 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">initPage</span>
+                <span class="method-start">78181 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.BoundaryValueTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">87831 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.BasicOperationsTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">92457 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.BoundaryValueTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initPage</span>
+                <span class="method-start">96323 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyRapidButtonClickingOnNoOperator</span>
+                <span class="method-start">96324 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">97795 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">97879 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.BasicOperationsTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">102573 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.BoundaryValueTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initPage</span>
+                <span class="method-start">106612 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyRapidButtonClickingOnNonNumber</span>
+                <span class="method-start">106615 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">108101 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">108189 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.BasicOperationsTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initPage</span>
+                <span class="method-start">109989 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyDivision</span>
+                <span class="method-start">109989 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.BoundaryValueTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initPage</span>
+                <span class="method-start">117128 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyRapidButtonClickingOnNumber</span>
+                <span class="method-start">117134 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">118648 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.BasicOperationsTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">124980 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">135087 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initPage</span>
+                <span class="method-start">143707 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyDecimalCalculation</span>
+                <span class="method-start">143708 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">158007 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">160313 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initPage</span>
+                <span class="method-start">169851 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyMultipleChainedOperations</span>
+                <span class="method-start">169852 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">171351 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

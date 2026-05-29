@@ -17,29 +17,13 @@ public class ScreenshotUtils {
 		
 		  if (DriverFactory.getDriver() == null) {
 
-		        System.out.println(
-		                "Driver is null. Screenshot skipped."
-		        );
+		        System.out.println( "Driver is null. Screenshot skipped." );
 
 		        return "";
 		    }
 
-        File src =
-                ((TakesScreenshot)
-                        DriverFactory.getDriver())
-                        .getScreenshotAs(
-                                OutputType.FILE
-                        );
+        File src = ((TakesScreenshot)DriverFactory.getDriver()).getScreenshotAs( OutputType.FILE );
 
-//        File directory =
-//                new File(
-//                        FrameworkConstants.SCREENSHOT_PATH
-//                );
-//
-//        if (!directory.exists()) {
-//
-//            directory.mkdirs();
-//        }
 
         String path =
                 FrameworkConstants.SCREENSHOT_PATH

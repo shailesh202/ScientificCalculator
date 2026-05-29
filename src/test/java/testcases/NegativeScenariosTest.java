@@ -14,17 +14,15 @@ public class NegativeScenariosTest extends BaseTest {
         calculator = new CalculatorPage();
     }
 
-    @Test(priority = 1, groups = {"sanity"}, description =  "verify Divide By Zero")
+    @Test(priority = 1, groups = {"sanity","regression"}, description =  "verify Divide By Zero")
     public void verifyDivideByZero() throws Exception {
 
         calculator.performCalculation("10", "÷", "0");
 
         String result = calculator.getDisplayedValue();
 
-        Assert.assertTrue(
-                result.contains("Infinity")
-                        || result.contains("Error") || result.contains("0")
-        );
+        Assert.assertTrue(result.contains("Infinity")
+                        || result.contains("Error") || result.contains("0"));
     }
 
     @Test(priority = 1, groups = {"sanity"}, description =  "verify Invalid Input")
@@ -35,10 +33,8 @@ public class NegativeScenariosTest extends BaseTest {
         String result = calculator.getDisplayedValue();
         System.out.println("result: " +result);
 
-        Assert.assertTrue(
-                result.equals("")
-                        || result.contains("Error") || result.contains("@")
-        );
+        Assert.assertTrue(result.equals("")
+                        || result.contains("Error") || result.contains("@"));
     }
 
     @Test(priority = 1, groups = {"sanity"}, description =  "verify Repeated Operators")
@@ -56,11 +52,8 @@ public class NegativeScenariosTest extends BaseTest {
         
         String result = calculator.getDisplayedValue();
 
-        Assert.assertTrue(
-                result.contains("Error")  || result.equals("NaN")
-                        || result.equals("10")
-                        || result.equals("7")
-        );
+        Assert.assertTrue(result.contains("Error")  || result.equals("NaN")
+                        || result.equals("10") || result.equals("7"));
     }
 
     @Test(priority = 1, groups = {"sanity"}, description =  "verify Empty Calculation")
@@ -70,10 +63,8 @@ public class NegativeScenariosTest extends BaseTest {
 
         String result = calculator.getDisplayedValue();
 
-        Assert.assertTrue(
-                result.equals("") || result.equals("undefined")
-                        || result.equals("0") || result.equals("NaN")
-        ); 
+        Assert.assertTrue(result.equals("") || result.equals("undefined")
+                        || result.equals("0") || result.equals("NaN")); 
     }
 
 }

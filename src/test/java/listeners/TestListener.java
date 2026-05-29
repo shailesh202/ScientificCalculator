@@ -3,6 +3,7 @@ package listeners;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 
 import utils.ConfigReader;
 import utils.ExtentManager;
@@ -15,102 +16,104 @@ import org.testng.ITestResult;
 
 public class TestListener implements ITestListener {
 	
-	  ExtentReports extent =
-	            ExtentManager.getInstance();
+	private static ExtentReports extent = ExtentManager.getInstance();
 
-	    ThreadLocal<ExtentTest> test =
-	            new ThreadLocal<>();
+    private static ThreadLocal<ExtentTest> test = new ThreadLocal<>();
 
-//	    @Override
-//	    public void onTestStart(ITestResult result) {
-//
-//	        ExtentTest extentTest =
-//	                extent.createTest(
-//	                        result.getMethod()
-//	                                .getMethodName()
-//	                );
-//
-//	        test.set(extentTest);
-//	    }
-	    
-	    @Override
-	    public void onTestStart(ITestResult result) {
+    @Override
+    public void onStart(ITestContext context) {
 
-	        ExtentTest extentTest =
-	                extent.createTest(
-	                        result.getMethod()
-	                                .getMethodName()
-	                );
+        System.out.println(
+                "Execution Started"
+        );
+    }
 
-	        String[] groups =
-	                result.getMethod()
-	                        .getGroups();
+    @Override
+    public void onTestStart(ITestResult result) {
 
-	        for (String group : groups) {
+        ExtentTest extentTest =
+                extent.createTest(
+                        result.getMethod()
+                                .getMethodName()
+                );
 
-	            extentTest.assignCategory(group);
-	        }
+        /*
+            Assign Groups
+         */
+        String[] groups =
+                result.getMethod()
+                        .getGroups();
 
-	        extentTest.assignAuthor("Shailesh");
+        for (String group : groups) {
 
-	        extentTest.assignDevice(
-	                ConfigReader.getProperty("browser")
-	        );
+            extentTest.assignCategory(group);
+        }
 
-	        test.set(extentTest);
-	    }
+        test.set(extentTest);
+    }
 
-	    @Override
-	    public void onTestSuccess(ITestResult result) {
+    @Override
+    public void onTestSuccess(ITestResult result) {
 
-	        test.get().pass(
-	                "Test Passed"
-	        );
-	    }
-	    
-	    @Override
-	    public void onTestFailure(ITestResult result) {
+        test.get().log(
+                Status.PASS,
+                "Test Passed"
+        );
+    }
 
-	        String screenshotPath =
-	                ScreenshotUtils.captureScreenshot(
-	                        result.getMethod()
-	                                .getMethodName()
-	                );
+    @Override
+    public void onTestFailure(ITestResult result) {
 
-//	        test.get().fail(
-//	                result.getThrowable()
-//	        );
-	        if (!screenshotPath.isEmpty()) {
+        test.get().log(
+                Status.FAIL,
+                "Test Failed"
+        );
 
-	            test.get().addScreenCaptureFromPath(
-	                    screenshotPath
-	            );
-	        }
+        /*
+            Log Exception
+         */
+        test.get().fail(
+                result.getThrowable()
+        );
 
-	        try {
+        /*
+            Capture Screenshot
+         */
+        String screenshotPath =
+                ScreenshotUtils.captureScreenshot(
+                        result.getMethod()
+                                .getMethodName()
+                );
 
-	            test.get().addScreenCaptureFromPath(
-	                    screenshotPath
-	            );
+        try {
 
-	        } catch (Exception e) {
+            if (!screenshotPath.isEmpty()) {
 
-	            e.printStackTrace();
-	        }
-	    }
+                test.get()
+                        .addScreenCaptureFromPath(
+                                screenshotPath
+                        );
+            }
 
-	    @Override
-	    public void onTestSkipped(ITestResult result) {
+        } catch (Exception e) {
 
-	        test.get().skip(
-	                "Test Skipped"
-	        );
-	    }
-	    
-	    @Override
-	    public void onFinish(ITestContext context) {
+            e.printStackTrace();
+        }
+    }
 
-	        extent.flush();
-	    }
+    @Override
+    public void onTestSkipped(ITestResult result) {
+
+        test.get().log( Status.SKIP, "Test Skipped");
+    }
+
+    @Override
+    public void onFinish(ITestContext context) {
+
+        extent.flush();
+
+        System.out.println(
+                "Execution Completed");
+    }
 
 }

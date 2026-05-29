@@ -15,60 +15,29 @@ public class WaitUtils {
 
     private static final int WAIT_TIME = 20;
 
-    /*
-        Wait for element visibility
-     */
-    public static WebElement waitForVisibility(
-            By locator) {
+    //    Wait for element visibility
+    public static WebElement waitForVisibility(By locator) {
 
-        WebDriverWait wait =
-                new WebDriverWait(
-                        DriverFactory.getDriver(),
-                        Duration.ofSeconds(WAIT_TIME)
-                );
+        WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(),Duration.ofSeconds(WAIT_TIME));
 
-        return wait.until(
-                ExpectedConditions
-                        .visibilityOfElementLocated(locator)
-        );
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
     
-    public static WebElement waitForClickable(
-            By locator) {
+    public static WebElement waitForClickable( By locator) {
 
-        WebDriverWait wait =
-                new WebDriverWait(
-                        DriverFactory.getDriver(),
-                        Duration.ofSeconds(WAIT_TIME)
-                );
+        WebDriverWait wait = new WebDriverWait( DriverFactory.getDriver(), Duration.ofSeconds(WAIT_TIME));
 
-        return wait.until(
-                ExpectedConditions
-                        .elementToBeClickable(locator)
-        );
+        return wait.until( ExpectedConditions.elementToBeClickable(locator));
     }
     
-    public static boolean waitForText(
-            By locator,
-            String expectedText) {
+    public static boolean waitForText(By locator,String expectedText) {
 
-        WebDriverWait wait =
-                new WebDriverWait(
-                        DriverFactory.getDriver(),
-                        Duration.ofSeconds(WAIT_TIME)
-                );
+        WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(),Duration.ofSeconds(WAIT_TIME));
 
-        return wait.until(
-                ExpectedConditions
-                        .textToBePresentInElementLocated(
-                                locator,
-                                expectedText
-                        )
-        );
+        return wait.until(ExpectedConditions.textToBePresentInElementLocated(locator,expectedText));
     }
 
-    public static void hardWait(
-            int seconds) {
+    public static void hardWait(int seconds) {
 
         try {
 

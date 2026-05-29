@@ -16,10 +16,7 @@ public class ExtentManager {
 
         if (extent == null) {
 
-            File directory =
-                    new File(
-                            FrameworkConstants.REPORT_PATH
-                    );
+            File directory = new File(FrameworkConstants.REPORT_PATH);
 
             if (!directory.exists()) {
 
@@ -32,30 +29,19 @@ public class ExtentManager {
                     + System.currentTimeMillis()
                     + ".html";
 
-            ExtentSparkReporter sparkReporter =
-                    new ExtentSparkReporter(reportFile);
+            ExtentSparkReporter sparkReporter = new ExtentSparkReporter(reportFile);
 
-            sparkReporter.config().setReportName(
-                    FrameworkConstants.REPORT_NAME
-            );
+            sparkReporter.config().setReportName(FrameworkConstants.REPORT_NAME );
             
-            sparkReporter.config().setDocumentTitle(
-                    FrameworkConstants.DOCUMENT_TITLE
-            );
+            sparkReporter.config().setDocumentTitle(FrameworkConstants.DOCUMENT_TITLE);
 
             extent = new ExtentReports();
 
             extent.attachReporter(sparkReporter);
 
-            extent.setSystemInfo(
-                    "Tester",
-                    FrameworkConstants.TESTER
-            );
+            extent.setSystemInfo("Tester",FrameworkConstants.TESTER);
 
-            extent.setSystemInfo(
-                    "Environment",
-                    FrameworkConstants.ENVIRONMENT
-            );
+            extent.setSystemInfo( "Environment", FrameworkConstants.ENVIRONMENT);
         }
 
         return extent;

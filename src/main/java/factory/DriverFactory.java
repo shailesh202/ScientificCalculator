@@ -1,52 +1,56 @@
 package factory;
 
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
 import utils.ConfigReader;
 
 import java.time.Duration;
 
 public class DriverFactory {
-	
-	private static ThreadLocal<WebDriver> driver =
-            new ThreadLocal<>();
 
-    public static void initDriver() {
+	private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
-        WebDriverManager.chromedriver().setup();
+	public static void initDriver() {
 
-        driver.set(new ChromeDriver());
+		WebDriverManager.chromedriver().setup();
 
-        getDriver().manage().window().maximize();
+		ChromeOptions options = new ChromeOptions();
 
-        /*
-            Keep implicit wait low
-         */
-        getDriver().manage().timeouts()
-                .implicitlyWait(
-                        Duration.ofSeconds(2)
-                );
+		options.addArguments("--headless=new");
 
-        getDriver().get(
-                ConfigReader.getProperty("url")
-        );
-    }
+		options.addArguments("--disable-gpu");
 
-    public static WebDriver getDriver() {
+		options.addArguments("--no-sandbox");
 
-        return driver.get();
-    }
+		options.addArguments("--disable-dev-shm-usage");
 
-    public static void quitDriver() {
+		options.addArguments("--window-size=1920,1080");
 
-        if (getDriver() != null) {
+		driver.set(new ChromeDriver(options));
 
-            getDriver().quit();
+		getDriver().manage().window().maximize();
 
-            driver.remove();
-        }
-    }
+		getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+
+		getDriver().get(ConfigReader.getProperty("applicationUrl"));
+	}
+
+	public static WebDriver getDriver() {
+
+		return driver.get();
+	}
+
+	public static void quitDriver() {
+
+		if (getDriver() != null) {
+
+			getDriver().quit();
+
+			driver.remove();
+		}
+	}
 
 }

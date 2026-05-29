@@ -23,10 +23,7 @@ public class ScientificOperationsTest extends BaseTest  {
 
         calculator.clickEquals();
 
-        Assert.assertEquals(
-                calculator.getDisplayedValue(),
-                "5"
-        );
+        Assert.assertEquals(calculator.getDisplayedValue(),"5");
     }
 
     @Test(priority = 1, groups = {"sanity"}, description =  "verify Percentage Operation")
@@ -40,10 +37,7 @@ public class ScientificOperationsTest extends BaseTest  {
 
         calculator.clickEquals();
 
-        Assert.assertEquals(
-                calculator.getDisplayedValue(),
-                "5"
-        );
+        Assert.assertEquals(calculator.getDisplayedValue(),"5");
     }
 
 //    @Test(priority = 1, groups = {"sanity"}, description =  "verify Power Operation")
@@ -57,10 +51,7 @@ public class ScientificOperationsTest extends BaseTest  {
 //
 //        calculator.clickEquals();
 //
-//        Assert.assertEquals(
-//                calculator.getDisplayedValue(),     // not available in calculator
-//                "8"
-//        );
+//        Assert.assertEquals(calculator.getDisplayedValue(), "8"); // not available in calculator
 //    }
 
     @Test(priority = 1, groups = {"sanity"}, description =  "verify Sin Operation")
@@ -92,9 +83,7 @@ public class ScientificOperationsTest extends BaseTest  {
         String result = calculator.getDisplayedValue();
         System.out.print("Result :" + result);
         
-        Assert.assertTrue(
-                 result.contains("0.5253")
-                    );//0.5253219888177297
+        Assert.assertTrue(result.contains("0.5253"));//0.5253219888177297
         Assert.assertEquals(result, "0.5253219888177297");
     }
 
@@ -109,9 +98,7 @@ public class ScientificOperationsTest extends BaseTest  {
         String result = calculator.getDisplayedValue();
         System.out.print("Result :" + result);
         
-        Assert.assertTrue(
-        		result.contains("0.7131")
-                   ); //0.7131230097859091
+        Assert.assertTrue(result.contains("0.7131")); //0.7131230097859091
         Assert.assertEquals(result, "0.7131230097859091");
     }
 }

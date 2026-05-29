@@ -3,6 +3,8 @@ package testcases;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import constants.FrameworkConstants;
 import pages.CalculatorPage;
 
 public class BoundaryValueTest extends BaseTest {
@@ -23,10 +25,7 @@ public class BoundaryValueTest extends BaseTest {
                 "999999999"
         );
 
-        Assert.assertEquals(
-                calculator.getDisplayedValue(),
-                "1999999998"
-        );
+        Assert.assertEquals(calculator.getDisplayedValue(), "1999999998");
     }
 
     @Test(priority = 1, groups = {"sanity", "regression"}, description =  "verify Floating Point Precision")
@@ -38,15 +37,10 @@ public class BoundaryValueTest extends BaseTest {
                 "0.2"
         );
 
-        double actual = Double.parseDouble(
-                calculator.getDisplayedValue()
-        );
+        double actual = Double.parseDouble(calculator.getDisplayedValue());
 
         Assert.assertEquals(
-                actual,
-                0.3,
-                0.0001
-        );
+                actual,0.3,  0.0001);
     }
     
     @Test(priority = 1, groups = {"sanity", "regression"}, description =  "verify Consecutive Decimal Points")
@@ -67,31 +61,26 @@ public class BoundaryValueTest extends BaseTest {
         String result = calculator.getDisplayedValue();
         System.out.println("result :" + result);
 
-        Assert.assertTrue(
-                result.contains("..")
-        );
+        Assert.assertTrue( result.contains("..") );
     }
 
     @Test(priority = 1, groups = {"sanity"}, description =  "verify Rapid Button Clicking On Number")
     public void verifyRapidButtonClickingOnNumber() {
 
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < FrameworkConstants.COUNTER; i++) {
             calculator.clickButton("1");
         }
 
         String result = calculator.getDisplayedValue();
 
-        Assert.assertEquals(
-                result.length(),
-                20
-        );
+        Assert.assertEquals(result.length(), FrameworkConstants.COUNTER );
   
     }
     
     @Test(priority = 1, groups = {"sanity"}, description =  "verify Rapid Button Clicking On Non Number")
     public void verifyRapidButtonClickingOnNonNumber() {
 
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < FrameworkConstants.COUNTER; i++) {
             calculator.clickButton("cos");
         }
 
@@ -102,16 +91,13 @@ public class BoundaryValueTest extends BaseTest {
     @Test(priority = 1, groups = {"sanity"}, description =  "verify Rapid Button Clicking On Operator")
     public void verifyRapidButtonClickingOnNoOperator() {
 
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < FrameworkConstants.COUNTER; i++) {
             calculator.clickButton("+");
         }
 
         String result = calculator.getDisplayedValue();
 
-        Assert.assertEquals(
-                result.length(),
-                20
-        );
+        Assert.assertEquals( result.length(), FrameworkConstants.COUNTER );
   
     }
 

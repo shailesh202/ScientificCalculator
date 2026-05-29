@@ -31,4 +31,6 @@ public class FrameworkConstants {
 
 	    public static final int RETRY_COUNT = 2;
 
+		public static final int COUNTER = 20;
+
 }

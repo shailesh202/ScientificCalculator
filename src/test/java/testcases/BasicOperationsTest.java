@@ -28,67 +28,54 @@ public class BasicOperationsTest extends BaseTest {
 
 	        calculator.performCalculation("10", "−", "4");
 
-	        Assert.assertEquals(
-	                calculator.getDisplayedValue(),
-	                "0.4" // some issue with application selector
-	        );
+	        Assert.assertEquals(calculator.getDisplayedValue(), "6"); // some issue with application selector 
 	    }
 
-//	    @Test(priority = 3, groups = {"regression"}, description =  "Verify the multiplication of two numbers")
-//	    public void verifyMultiplication() throws Exception {
-//
-//	        calculator.performCalculation("7", "×", "6");
-//	       // System.out.print(calculator.performCalculation("7", "*", "6"));
-//
-//	        Assert.assertEquals(
-//	                calculator.getDisplayedValue(),
-//	                "42"
-//	        );
-//	    }
-//
-//	    @Test(priority = 4, groups = {"regression"}, description =  "Verify the devision of two numbers")
-//	    public void verifyDivision() throws Exception {
-//
-//	        calculator.performCalculation("6", "÷", "18");
-//
-//	        Assert.assertEquals(
-//	                calculator.getDisplayedValue(),
-//	                "3"
-//	        );
-//	    }
+	    @Test(priority = 3, groups = {"regression"}, description =  "Verify the multiplication of two numbers")
+	    public void verifyMultiplication() throws Exception {
 
-//	    @Test(priority = 5, groups = {"sanity"}, description =  "Verify the calculation of two decimal numbers")
-//	    public void verifyDecimalCalculation() throws Exception {
-//
-//	        calculator.performCalculation("5.5", "+", "2.2");
-//
-//	        Assert.assertEquals(
-//	                calculator.getDisplayedValue(),
-//	                "7.7"
-//	        );
-//	    }
+	        calculator.performCalculation("7", "×", "6");
 
-//	    @Test(priority = 6, groups = {"sanity"}, description =  "Verify the BOSMAD calculation of three or more numbers")
-//	    public void verifyMultipleChainedOperations() throws Exception {
-//
-//	        calculator.enterNumber("5");
-//            Thread.sleep(1000);
-//	        calculator.clickButton("+");
-//	        Thread.sleep(1000);
-//	        calculator.enterNumber("1");
-//	        Thread.sleep(1000);
-//	        calculator.clickButton("×");
-//	        Thread.sleep(1000);
-//	        calculator.enterNumber("2");
-//	        Thread.sleep(1000);
-//	        calculator.clickEquals();
-//	        Thread.sleep(1000);
-//	        System.out.println("Verify result : " + calculator.getDisplayedValue());
-//	        
-//	        String result = calculator.getDisplayedValue();
-//	        System.out.println("Multi result :" + result);
-//
-//	        Assert.assertTrue( result.equals("7")|| result.equals("12"));
-//	    }
+	        Assert.assertEquals(calculator.getDisplayedValue(),"42");
+	    }
+
+	    @Test(priority = 4, groups = {"regression"}, description =  "Verify the devision of two numbers")
+	    public void verifyDivision() throws Exception {
+
+	        calculator.performCalculation("18", "÷", "6");
+
+	        Assert.assertEquals(calculator.getDisplayedValue(), "3" ); // seems application issue with calculation
+	    }
+
+	    @Test(priority = 5, groups = {"sanity"}, description =  "Verify the calculation of two decimal numbers")
+	    public void verifyDecimalCalculation() throws Exception {
+
+	        calculator.performCalculation("5.5", "+", "2.2");
+
+	        Assert.assertEquals(calculator.getDisplayedValue(), "7.7");
+	    }
+
+	    @Test(priority = 6, groups = {"sanity"}, description =  "Verify the BOSMAD calculation of three or more numbers")
+	    public void verifyMultipleChainedOperations() throws Exception {
+
+	        calculator.enterNumber("5");
+            
+	        calculator.clickButton("+");
+	        
+	        calculator.enterNumber("1");
+	       
+	        calculator.clickButton("×");
+	        
+	        calculator.enterNumber("2");
+	    
+	        calculator.clickEquals();
+	      
+	        System.out.println("Verify result : " + calculator.getDisplayedValue());
+	        
+	        String result = calculator.getDisplayedValue();
+	        System.out.println("Multi result :" + result);
+
+	        Assert.assertTrue( result.equals("7")|| result.equals("12"));
+	    }
 
 }

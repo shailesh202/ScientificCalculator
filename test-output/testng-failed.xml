@@ -9,9 +9,9 @@
       <class name="testcases.BasicOperationsTest">
         <methods>
           <include name="initPage"/>
+          <include name="verifyDivision"/>
           <include name="setup"/>
           <include name="tearDown"/>
-          <include name="verifyAddition"/>
           <include name="verifySubtraction"/>
         </methods>
       </class> <!-- testcases.BasicOperationsTest -->

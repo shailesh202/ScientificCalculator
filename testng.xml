@@ -14,9 +14,9 @@
 
         <classes>
             <class name="testcases.BasicOperationsTest"/>
-            <!-- <class name="testcases.ScientificOperationsTest"/>
+            <class name="testcases.ScientificOperationsTest"/>
             <class name="testcases.NegativeScenariosTest"/>
-           <class name="testcases.BoundaryValueTest"/>  -->
+            <class name="testcases.BoundaryValueTest"/> 
         </classes>
 
     </test>
