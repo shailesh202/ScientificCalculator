@@ -17,6 +17,8 @@
             <class name="testcases.ScientificOperationsTest"/>
             <class name="testcases.NegativeScenariosTest"/>
             <class name="testcases.BoundaryValueTest"/> 
+            <class name="testcases.BodmasOperationsTest"/>
+            <class name="testcases.BugScenarioTest"/>
         </classes>
 
     </test>
