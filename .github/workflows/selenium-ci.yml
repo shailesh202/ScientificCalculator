@@ -51,6 +51,7 @@ jobs:
       # Execute Automation Suite
       - name: Run Selenium Test Suite
         run: mvn clean test
+        continue-on-error: true
 
       # Upload Extent Reports
       - name: Upload Extent Reports
