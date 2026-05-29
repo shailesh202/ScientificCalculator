@@ -39,7 +39,7 @@ public class BugScenarioTest extends BaseTest {
 
         calculator.performCalculation("18", "÷", "6");
 
-        Assert.assertEquals(calculator.getDisplayedValue(), "0.3333333333333333" ); // actual should be 3
+        Assert.assertEquals(calculator.getDisplayedValue(), "3" ); // actual should be 3
     }
 
     
@@ -48,7 +48,7 @@ public class BugScenarioTest extends BaseTest {
 
         calculator.performCalculation("8", "÷", "5");
 
-        Assert.assertEquals(calculator.getDisplayedValue(), "0.625" ); // actual should be 1.6
+        Assert.assertEquals(calculator.getDisplayedValue(), "1.6" ); // actual should be 1.6
     }
     
     @Test(groups = {"bug"}, description =  "Verify the Subtraction of two numbers")
@@ -56,7 +56,7 @@ public class BugScenarioTest extends BaseTest {
 
         calculator.performCalculation("10", "−", "4");
 
-        Assert.assertEquals(calculator.getDisplayedValue(), "0.4"); // actual should be 6 
+        Assert.assertEquals(calculator.getDisplayedValue(), "6"); // actual should be 6 
     }
     
     @Test( groups = {"bug"},description = "Verify division precedence")
@@ -66,7 +66,7 @@ public class BugScenarioTest extends BaseTest {
 
         calculator.clickEquals();
 
-        Assert.assertEquals(calculator.getDisplayedValue(), "5.2" ); //actual should be 10
+        Assert.assertEquals(calculator.getDisplayedValue(), "10" ); //actual should be 10
     }
     
     @Test(groups = {"bug"}, description = "Verify bracket precedence")
@@ -76,7 +76,7 @@ public class BugScenarioTest extends BaseTest {
 
         calculator.clickEquals();
 
-        Assert.assertEquals( calculator.getDisplayedValue(), "8" ); //actual should be 32
+        Assert.assertEquals( calculator.getDisplayedValue(), "32" ); //actual should be 32
     }
 
     @Test( groups = {"bug"}, description = "Verify mixed BODMAS operations")
@@ -86,7 +86,7 @@ public class BugScenarioTest extends BaseTest {
 
         calculator.clickEquals();
         
-        Assert.assertEquals( calculator.getDisplayedValue(), "2.1785714285714284" ); //Actual should be 25
+        Assert.assertEquals( calculator.getDisplayedValue(), "25" ); //Actual should be 25
     }
     
     @Test( groups = {"bug"}, description = "Verify bodmas operation")
@@ -96,6 +96,6 @@ public class BugScenarioTest extends BaseTest {
 
         calculator.clickEquals();
 
-        Assert.assertEquals(calculator.getDisplayedValue(), "7"); // Actual should be 49
+        Assert.assertEquals(calculator.getDisplayedValue(), "49"); // Actual should be 49
     }
 }
