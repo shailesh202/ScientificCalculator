@@ -1,1 +1,15 @@
-/target/
+target/
+
+reports/
+
+screenshots/
+
+.idea/
+
+.project
+
+.classpath
+
+.settings/
+
+*.iml
