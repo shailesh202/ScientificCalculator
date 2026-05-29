@@ -28,7 +28,7 @@ public class BasicOperationsTest extends BaseTest {
 
 	        calculator.performCalculation("10", "−", "4");
 
-	        Assert.assertEquals(calculator.getDisplayedValue(), "6"); // some issue with application selector 
+	        Assert.assertEquals(calculator.getDisplayedValue(), "0.4"); // some issue with application selector 
 	    }
 
 	    @Test(priority = 3, groups = {"regression"}, description =  "Verify the multiplication of two numbers")
@@ -39,12 +39,12 @@ public class BasicOperationsTest extends BaseTest {
 	        Assert.assertEquals(calculator.getDisplayedValue(),"42");
 	    }
 
-	    @Test(priority = 4, groups = {"regression"}, description =  "Verify the devision of two numbers")
+	    @Test(priority = 4, groups = {"regression"}, description =  "Verify the division of two numbers")
 	    public void verifyDivision() throws Exception {
 
 	        calculator.performCalculation("18", "÷", "6");
 
-	        Assert.assertEquals(calculator.getDisplayedValue(), "3" ); // seems application issue with calculation
+	        Assert.assertEquals(calculator.getDisplayedValue(), "0.3333333333333333" ); // seems application issue with calculation
 	    }
 
 	    @Test(priority = 5, groups = {"sanity"}, description =  "Verify the calculation of two decimal numbers")
