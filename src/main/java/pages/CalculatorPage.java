@@ -1,11 +1,12 @@
 package pages;
 
-import factory.DriverFactory;
 import utils.WaitUtils;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+
+import baseFactory.DriverFactory;
 
 public class CalculatorPage {
 	
@@ -87,6 +88,15 @@ public class CalculatorPage {
         js.executeScript(
                 "document.getElementById('display').value='" + value + "';"
         );
+    }
+    
+    public void enterExpression(
+            String expression) {
+
+        for (char ch : expression.toCharArray()) {
+
+            clickButton(String.valueOf(ch));
+        }
     }
 
 

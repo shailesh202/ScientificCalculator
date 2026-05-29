@@ -28,7 +28,7 @@ public class BoundaryValueTest extends BaseTest {
         Assert.assertEquals(calculator.getDisplayedValue(), "1999999998");
     }
 
-    @Test(priority = 1, groups = {"sanity", "regression"}, description =  "verify Floating Point Precision")
+    @Test(priority = 2, groups = {"sanity", "regression"}, description =  "verify Floating Point Precision")
     public void verifyFloatingPointPrecision() throws Exception {
 
         calculator.performCalculation(
@@ -43,7 +43,7 @@ public class BoundaryValueTest extends BaseTest {
                 actual,0.3,  0.0001);
     }
     
-    @Test(priority = 1, groups = {"sanity", "regression"}, description =  "verify Consecutive Decimal Points")
+    @Test(priority = 3, groups = {"sanity", "regression"}, description =  "verify Consecutive Decimal Points")
     public void verifyConsecutiveDecimalPoints() {
 
         calculator.enterNumber("5");
@@ -64,7 +64,7 @@ public class BoundaryValueTest extends BaseTest {
         Assert.assertTrue( result.contains("..") );
     }
 
-    @Test(priority = 1, groups = {"sanity"}, description =  "verify Rapid Button Clicking On Number")
+    @Test(priority = 4, groups = {"sanity"}, description =  "verify Rapid Button Clicking On Number")
     public void verifyRapidButtonClickingOnNumber() {
 
         for (int i = 0; i < FrameworkConstants.COUNTER; i++) {
@@ -77,7 +77,7 @@ public class BoundaryValueTest extends BaseTest {
   
     }
     
-    @Test(priority = 1, groups = {"sanity"}, description =  "verify Rapid Button Clicking On Non Number")
+    @Test(priority = 5, groups = {"sanity"}, description =  "verify Rapid Button Clicking On Non Number")
     public void verifyRapidButtonClickingOnNonNumber() {
 
         for (int i = 0; i < FrameworkConstants.COUNTER; i++) {
@@ -88,7 +88,7 @@ public class BoundaryValueTest extends BaseTest {
   
     }
     
-    @Test(priority = 1, groups = {"sanity"}, description =  "verify Rapid Button Clicking On Operator")
+    @Test(priority = 6, groups = {"sanity"}, description =  "verify Rapid Button Clicking On Operator")
     public void verifyRapidButtonClickingOnNoOperator() {
 
         for (int i = 0; i < FrameworkConstants.COUNTER; i++) {

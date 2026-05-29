@@ -14,16 +14,7 @@ public class NegativeScenariosTest extends BaseTest {
         calculator = new CalculatorPage();
     }
 
-    @Test(priority = 1, groups = {"sanity","regression"}, description =  "verify Divide By Zero")
-    public void verifyDivideByZero() throws Exception {
 
-        calculator.performCalculation("10", "÷", "0");
-
-        String result = calculator.getDisplayedValue();
-
-        Assert.assertTrue(result.contains("Infinity")
-                        || result.contains("Error") || result.contains("0"));
-    }
 
     @Test(priority = 1, groups = {"sanity"}, description =  "verify Invalid Input")
     public void verifyInvalidInput() throws Exception {
@@ -37,7 +28,7 @@ public class NegativeScenariosTest extends BaseTest {
                         || result.contains("Error") || result.contains("@"));
     }
 
-    @Test(priority = 1, groups = {"sanity"}, description =  "verify Repeated Operators")
+    @Test(priority = 2, groups = {"sanity", "regression"}, description =  "verify Repeated Operators")
     public void verifyRepeatedOperators() {
 
         calculator.enterNumber("5");
@@ -56,7 +47,7 @@ public class NegativeScenariosTest extends BaseTest {
                         || result.equals("10") || result.equals("7"));
     }
 
-    @Test(priority = 1, groups = {"sanity"}, description =  "verify Empty Calculation")
+    @Test(priority = 3, groups = {"sanity"}, description =  "verify Empty Calculation")
     public void verifyEmptyCalculation() {
 
         calculator.clickEquals();

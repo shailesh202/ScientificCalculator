@@ -1,10 +1,10 @@
 package utils;
 
-import factory.DriverFactory;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
+import baseFactory.DriverFactory;
 import constants.FrameworkConstants;
 
 import java.io.File;
