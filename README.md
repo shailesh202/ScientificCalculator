@@ -113,6 +113,16 @@ ScientificCalculator/
 
 ---
 
+## Bug scenarios seperated Testing
+
+* verify Digit Three
+* verify Division
+* verify Subtraction
+* verify Division Precedence
+* verify Mixed Operations
+
+---
+
 # Framework Components
 
 ## BaseTest
