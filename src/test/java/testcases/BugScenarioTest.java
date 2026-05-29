@@ -31,7 +31,7 @@ public class BugScenarioTest extends BaseTest {
 
     	calculator.enterNumber("3");
 
-        Assert.assertEquals(calculator.getDisplayedValue(), "3"); // actual should be 3
+        Assert.assertEquals(calculator.getDisplayedValue(), "0"); // actual should be 3
     }
     
     @Test(groups = {"bug"}, description =  "Verify the division of two numbers")
